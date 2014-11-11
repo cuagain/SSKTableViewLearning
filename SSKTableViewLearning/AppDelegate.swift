@@ -17,6 +17,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let viewController = self.window?.rootViewController as MainTableViewController
+        viewController.isLoaded = false
+        
+        let url = NSURL(string: "http://www.ukasios-local.com/demos/public/getSections")
+        
+        DataManager.loadDataFromURL(url!, completion: { (data, error) -> Void in
+            let json = JSON(data: data!)
+            
+            viewController.sectionData = json
+            
+            viewController.tableView!.reloadData()
+            
+            viewController.isLoaded = true
+            
+            viewController.dismissViewControllerAnimated(true, completion: {})
+            
+        })
+
+        
+        
         return true
     }
 

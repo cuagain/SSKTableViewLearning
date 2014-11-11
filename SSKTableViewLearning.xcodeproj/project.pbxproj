@@ -9,11 +9,15 @@
 /* Begin PBXBuildFile section */
 		9062099B1A12276100DF5C38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9062099A1A12276100DF5C38 /* AppDelegate.swift */; };
 		9062099E1A12276100DF5C38 /* SSKTableViewLearning.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9062099C1A12276100DF5C38 /* SSKTableViewLearning.xcdatamodeld */; };
-		906209A01A12276100DF5C38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9062099F1A12276100DF5C38 /* ViewController.swift */; };
 		906209A31A12276100DF5C38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 906209A11A12276100DF5C38 /* Main.storyboard */; };
 		906209A51A12276100DF5C38 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 906209A41A12276100DF5C38 /* Images.xcassets */; };
 		906209A81A12276100DF5C38 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 906209A61A12276100DF5C38 /* LaunchScreen.xib */; };
 		906209B41A12276100DF5C38 /* SSKTableViewLearningTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906209B31A12276100DF5C38 /* SSKTableViewLearningTests.swift */; };
+		906209BE1A1227BE00DF5C38 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906209BD1A1227BE00DF5C38 /* MainTableViewController.swift */; };
+		90674D8E1A123FBC00D4FCFC /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90674D8D1A123FBC00D4FCFC /* SwiftyJSON.swift */; };
+		90674D901A123FD700D4FCFC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90674D8F1A123FD700D4FCFC /* DataManager.swift */; };
+		90674D931A125AC300D4FCFC /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90674D921A125AC300D4FCFC /* LaunchScreenViewController.swift */; };
+		90674D951A125C2500D4FCFC /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90674D941A125C2500D4FCFC /* MainNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +35,17 @@
 		906209991A12276100DF5C38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9062099A1A12276100DF5C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9062099D1A12276100DF5C38 /* SSKTableViewLearning.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SSKTableViewLearning.xcdatamodel; sourceTree = "<group>"; };
-		9062099F1A12276100DF5C38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		906209A21A12276100DF5C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		906209A41A12276100DF5C38 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		906209A71A12276100DF5C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		906209AD1A12276100DF5C38 /* SSKTableViewLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SSKTableViewLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		906209B21A12276100DF5C38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		906209B31A12276100DF5C38 /* SSKTableViewLearningTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSKTableViewLearningTests.swift; sourceTree = "<group>"; };
+		906209BD1A1227BE00DF5C38 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		90674D8D1A123FBC00D4FCFC /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		90674D8F1A123FD700D4FCFC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		90674D921A125AC300D4FCFC /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		90674D941A125C2500D4FCFC /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,8 +87,12 @@
 		906209971A12276100DF5C38 /* SSKTableViewLearning */ = {
 			isa = PBXGroup;
 			children = (
+				90674D8F1A123FD700D4FCFC /* DataManager.swift */,
+				90674D8D1A123FBC00D4FCFC /* SwiftyJSON.swift */,
 				9062099A1A12276100DF5C38 /* AppDelegate.swift */,
-				9062099F1A12276100DF5C38 /* ViewController.swift */,
+				90674D941A125C2500D4FCFC /* MainNavigationViewController.swift */,
+				906209BD1A1227BE00DF5C38 /* MainTableViewController.swift */,
+				90674D921A125AC300D4FCFC /* LaunchScreenViewController.swift */,
 				906209A11A12276100DF5C38 /* Main.storyboard */,
 				906209A41A12276100DF5C38 /* Images.xcassets */,
 				906209A61A12276100DF5C38 /* LaunchScreen.xib */,
@@ -215,9 +227,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				906209A01A12276100DF5C38 /* ViewController.swift in Sources */,
+				90674D951A125C2500D4FCFC /* MainNavigationViewController.swift in Sources */,
 				9062099B1A12276100DF5C38 /* AppDelegate.swift in Sources */,
+				90674D901A123FD700D4FCFC /* DataManager.swift in Sources */,
+				906209BE1A1227BE00DF5C38 /* MainTableViewController.swift in Sources */,
 				9062099E1A12276100DF5C38 /* SSKTableViewLearning.xcdatamodeld in Sources */,
+				90674D931A125AC300D4FCFC /* LaunchScreenViewController.swift in Sources */,
+				90674D8E1A123FBC00D4FCFC /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +425,7 @@
 				906209B91A12276100DF5C38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		906209BA1A12276100DF5C38 /* Build configuration list for PBXNativeTarget "SSKTableViewLearningTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +434,7 @@
 				906209BC1A12276100DF5C38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
