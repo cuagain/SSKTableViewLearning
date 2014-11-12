@@ -18,6 +18,7 @@
 		90674D901A123FD700D4FCFC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90674D8F1A123FD700D4FCFC /* DataManager.swift */; };
 		90674D931A125AC300D4FCFC /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90674D921A125AC300D4FCFC /* LaunchScreenViewController.swift */; };
 		90674D951A125C2500D4FCFC /* MainNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90674D941A125C2500D4FCFC /* MainNavigationViewController.swift */; };
+		90DE4B3E1A13CEF600632BB2 /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DE4B3D1A13CEF600632BB2 /* MyCustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		90674D8F1A123FD700D4FCFC /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		90674D921A125AC300D4FCFC /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		90674D941A125C2500D4FCFC /* MainNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationViewController.swift; sourceTree = "<group>"; };
+		90DE4B3D1A13CEF600632BB2 /* MyCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				90674D8D1A123FBC00D4FCFC /* SwiftyJSON.swift */,
 				9062099A1A12276100DF5C38 /* AppDelegate.swift */,
 				90674D941A125C2500D4FCFC /* MainNavigationViewController.swift */,
+				90DE4B3D1A13CEF600632BB2 /* MyCustomCell.swift */,
 				906209BD1A1227BE00DF5C38 /* MainTableViewController.swift */,
 				90674D921A125AC300D4FCFC /* LaunchScreenViewController.swift */,
 				906209A11A12276100DF5C38 /* Main.storyboard */,
@@ -233,6 +236,7 @@
 				906209BE1A1227BE00DF5C38 /* MainTableViewController.swift in Sources */,
 				9062099E1A12276100DF5C38 /* SSKTableViewLearning.xcdatamodeld in Sources */,
 				90674D931A125AC300D4FCFC /* LaunchScreenViewController.swift in Sources */,
+				90DE4B3E1A13CEF600632BB2 /* MyCustomCell.swift in Sources */,
 				90674D8E1A123FBC00D4FCFC /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

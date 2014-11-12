@@ -54,7 +54,7 @@ class MainTableViewController: UITableViewController {
             case Type.Array, Type.Dictionary:
                 return self.sectionData.count
             default:
-                return 1
+                return 0
         }
         
         //return 0;
@@ -66,7 +66,8 @@ class MainTableViewController: UITableViewController {
         
         switch self.sectionData[section]["articles"].type {
             case Type.Array, Type.Dictionary:
-                return self.sectionData[section]["articles"].count
+                //return self.sectionData[section]["articles"].count
+                return 1;
             default:
                 return 0
         }
@@ -95,20 +96,24 @@ class MainTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44.0;
+        return 44.0
     }
 
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 90.0
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("JSONCell", forIndexPath: indexPath) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("JSONCell", forIndexPath: indexPath) as MyCustomCell
         
         var row = indexPath.row
         let section = indexPath.section
-        
+        var data:JSON!
         switch self.sectionData[section]["articles"].type {
             case .Array:
-                cell.textLabel.text = self.sectionData[section]["articles"][row]["title"].stringValue
+                //cell.textLabel.text = self.sectionData[section]["articles"][row]["title"].stringValue
                 //cell.detailTextLabel?.text = self.sectionData[section]["articles"]["title"].stringValue
+                data = self.sectionData[section]["articles"];
             case .Dictionary:
                 let key: AnyObject = (self.sectionData.object as NSDictionary).allKeys[row]
                 let value = self.sectionData[key as String]
@@ -118,7 +123,32 @@ class MainTableViewController: UITableViewController {
                 cell.textLabel.text = ""
                 //cell.detailTextLabel?.text = self.sectionData.description
         }
-
+        
+        let scrollView = cell.scView
+        let h = cell.frame.height
+        scrollView.contentSize = CGSize(width: h * CGFloat(data.count), height: h)
+        
+        for item in scrollView.subviews {
+            item.removeFromSuperview()
+        }
+        
+        for var i = 0; i < data.count; i++ {
+            println("row[\(section)]item ====> ")
+            println(data[i]["thumbnail"])
+            println(" <======")
+            let strURL = data[i]["thumbnail"].stringValue
+            let url = NSURL(string: strURL)
+            let img = UIImage(data: NSData(contentsOfURL: url!)!)
+            var imgView = UIImageView(image: img!)
+            let x = CGFloat(i) * h
+            imgView.frame = CGRectMake(x, 0, h, h)
+            scrollView.addSubview(imgView)
+            
+        }
+        
+        println(cell.bounds.size.height)
+        
+        
         return cell
     }
     

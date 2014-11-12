@@ -13,11 +13,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JSONCell" id="wHU-mC-98A">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="JSONCell" id="wHU-mC-98A" customClass="MyCustomCell" customModule="SSKTableViewLearning" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wHU-mC-98A" id="flM-tg-xd8">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p6e-Ki-CjG">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                        </scrollView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="p6e-Ki-CjG" firstAttribute="top" secondItem="flM-tg-xd8" secondAttribute="top" id="LY7-Z7-Yh5"/>
+                                        <constraint firstItem="p6e-Ki-CjG" firstAttribute="leading" secondItem="flM-tg-xd8" secondAttribute="leading" id="fhr-H3-STe"/>
+                                        <constraint firstAttribute="trailing" secondItem="p6e-Ki-CjG" secondAttribute="trailing" id="u6P-6y-lqJ"/>
+                                        <constraint firstAttribute="bottom" secondItem="p6e-Ki-CjG" secondAttribute="bottom" id="z2Q-30-oY2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="scView" destination="p6e-Ki-CjG" id="hPO-nQ-Roz"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
